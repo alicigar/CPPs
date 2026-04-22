@@ -16,11 +16,11 @@ class PhoneBook
 	public:
 		PhoneBook();
 		~PhoneBook();
-		void	add(void);
-		void	search(void);
 		std::string checkEmptyName(std::string message);
 		std::string checkEmptyPhone(std::string message);
 		std::string	truncate(std::string str);
+		void	add(void);
+		void	search(void);
 };
 
 #endif

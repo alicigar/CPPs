@@ -29,23 +29,37 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	void	(Harl::*functions[])(void) =
-	{
-		&Harl::debug, 
-		&Harl::info, 
-		&Harl::warning, 
-		&Harl::error
-	};
-
 	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-
+	int	index = -1;
 	for (int i = 0; i < 4; i++)
 	{
 		if (levels[i] == level)
 		{
-			(this->*functions[i])();
-			return ;
+			index = i;
+			break ;
 		}
 	}
-	std::cout << "Error: This is an unknown level, sweetheart." << std::endl;
+	switch (index)
+	{
+		case 0:
+			debug();
+			info();
+			warning();
+			error();
+			break ;
+		case 1:
+			info();
+			warning();
+			error();
+			break ;
+		case 2:
+			warning();
+			error();
+			break ;
+		case 3:
+			error();
+			break ;
+		default:
+			std::cout << "Probably complaining about insignificant problems" << std::endl;
+	}
 }

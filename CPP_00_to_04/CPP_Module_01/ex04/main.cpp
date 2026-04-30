@@ -1,3 +1,18 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+void	search_and_replace(std::string &buffer, std::string &s1, std::string &s2)
+{
+	size_t pos = 0;
+	while ((pos = buffer.find(s1, pos)) != std::string::npos)
+	{
+		buffer.erase(pos, s1.length());
+		buffer.insert(pos, s2);
+		pos += s2.length();
+	}
+}
+
 int	main(int argc, char **argv)
 {
 	if (argc != 4)

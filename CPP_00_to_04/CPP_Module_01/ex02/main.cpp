@@ -8,7 +8,7 @@ int	main()
 	std::string &stringREF = str;
 
 	std::cout << "The memory adress of the string: " << &str << std::endl;
-	std::cout << "The memory address held by stringPTR: " << &stringPTR << std::endl;
+	std::cout << "The memory address held by stringPTR: " << stringPTR << std::endl;
 	std::cout << "The memory address held by stringREF: " << &stringREF << std::endl;
 	std::cout << std::endl;
 	std::cout << "The value of str: " << str << std::endl;

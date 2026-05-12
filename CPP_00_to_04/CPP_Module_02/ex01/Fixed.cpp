@@ -1,5 +1,65 @@
 #include "Fixed.hpp"
 
+//Constructor por defecto
+Fixed::Fixed() : _fpvalue(0)
+{
+	std::cout << "Default constructor called" << std::endl;
+}
+
+//Constructor de copia
+Fixed::Fixed(const Fixed &src)
+{
+	std::cout << "Copy constructor called" << std::endl;
+}
+
+//Operador de asignación
+Fixed &Fixed &operator=(const Fixed &src)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	if (this != &src)
+		this->_fpvalue = src.getRawBits();
+	return *this;
+}
+
+//Destructor
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+//Constructor con int
+Fixed(int const n)
+{
+
+}
+
+//Constructor con float
+
+
+//FUNCIONES
+float toFloat(void) const
+{
+	std::cout << "Float constructor called" << std::endl;
+	//_fpvalue = roundf(f * 256.0f)
+}
+
+int 	toInt(void) const
+{
+	//return _fpvalue / 256.0f;
+}
+
+int	Fixed::getRawBits(void) const
+{
+	std::cout << "getRawBits member function called" << std::endl;
+	return _fpvalue;
+}
+
+void Fixed::setRawBits(int const raw)
+{
+	std::cout << "setRawBits member function called" << std::endl;
+	_fpvalue = raw;
+}
+
 std::ostream &operator<<(std::ostream &o, const Fixed &fixed)
 {
 	o << fixed.toFloat();

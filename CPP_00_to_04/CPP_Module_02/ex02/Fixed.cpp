@@ -1,7 +1,5 @@
 #include "Fixed.hpp"
 
-//LOS MENSAJES HAY QUE COMENTARLOS!!
-
 Fixed::Fixed() : _fpvalue(0)
 {
 	//std::cout << "Default constructor called" << std::endl;

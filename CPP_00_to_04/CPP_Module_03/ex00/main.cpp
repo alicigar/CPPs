@@ -2,10 +2,10 @@
 
 int main()
 {
-	ClapTrap a("Seagull");
+	ClapTrap seagull("Seagull");
 
-	a.attack("Cat");
-	a.takeDamage(5);
-	a.beRepaired(2);
+	seagull.attack("Cat");
+	seagull.takeDamage(3);
+	seagull.beRepaired(2);
 	return (0);
 }

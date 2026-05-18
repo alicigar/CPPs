@@ -11,5 +11,32 @@ int main(void)
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
+
+	std::cout << "\nMORE COMPARISON OPERATORS" << std::endl;
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "a > b: " << (a > b) << std::endl;
+	std::cout << "a < b: " << (a < b) << std::endl;
+	std::cout << "a >= b: " << (a >= b) << std::endl;
+	std::cout << "a <= b: " << (a <= b) << std::endl;
+	std::cout << "a == b: " << (a == b) << std::endl;
+	std::cout << "a != b: " << (a != b) << std::endl;
+
+	std::cout << "\nMORE ARITHMETIC OPERATOR" << std::endl;
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "a + b = " << (a + b) << std::endl;
+	std::cout << "a - b = " << (a - b) << std::endl;
+	std::cout << "a / b = " << (a / b) << std::endl;
+
+	std::cout << "\nMORE INCREMENT/DECREMENT WITH a" << std::endl;
+	std::cout << "a = " << a << std::endl;
+	std::cout << "--a = " << --a << std::endl;
+	std::cout << "a = " << a << std::endl;
+	std::cout << "a-- = " << a-- << std::endl;
+	std::cout << "a = " << a << std::endl;
+
+	std::cout << "\nMIN WITH a AND b ===" << std::endl;
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min(a, b) = " << Fixed::min(a, b) << std::endl;
+
 	return 0;
 }

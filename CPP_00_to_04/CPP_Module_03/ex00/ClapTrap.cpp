@@ -16,7 +16,7 @@ ClapTrap::ClapTrap(const ClapTrap &src)
 	*this = src;
 }
 
-ClapTrap &ClapTrap::operator=(const Fixed &src)
+ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
@@ -36,39 +36,21 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-	std::cout << "ClapTrap" << this->_name << " attacks " << target << " causing ";
+	this->_energyPoints -= 1;
+	std::cout << "ClapTrap " << this->_name << " attacks " << target << " causing " << this-> _attackDamage << " points of damage!" << std::endl;
 }
-
-/*PROTOTIPO MENSAJE:
-ClapTrap <name> attacks <target>, causing <damage> points of damage! */
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	this->_hitPoints -= amount;
-	std::cout << "ClapTrap" << this->_name << " takes " << amount << " damage! Now has " << this->_hitPoints << " hit points" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " has received " << amount << " points of damage! And now has " << this->_hitPoints << " energy points left" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
+	if (this->_hitPoints <= 0 || this-> _energyPoints <= 0)
+		return ;
 	this->_hitPoints += amount;
-	std::cout << "ClapTrap" << this->_name << " regains " << amount << " is repaired! Now has " << this->_hitPoints << " hit points" << std::endl;
+	this->_energyPoints -= 1;
+	std::cout << "ClapTrap " << this->_name << " regains " << amount << " points of energy! Now has " << this->_hitPoints << " hit points" << std::endl;
 }
-
-
-/*Cuando ClapTrap attack, hace que su objetivo pierda <attack damage>, hit points
-
-Cuando ClapTrap beRepaired, recupera <amount>, hit points
-
-attack y beRepaired cuesta 1 _energyPoint cada uno
-
-sin _energyPoints, ClapTrap no puede hacer nada
-
-
- */
-
-
-//1.takeDamage: recibe daño de algo externo. resta hitPoints
-
-//2.attack: ataca, usa energía
-
-//3.beRepaired: se repara, SUMA hitpoints.

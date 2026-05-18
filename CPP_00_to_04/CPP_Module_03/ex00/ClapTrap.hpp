@@ -24,12 +24,3 @@ class ClapTrap
 };
 
 #endif
-
-/*
-
-***However, since these exercises serve as an introduction,
-the ClapTrap instances should not interact directly with one another, 
-and the parameters will not refer to another instance of ClapTrap
-
-
-*/

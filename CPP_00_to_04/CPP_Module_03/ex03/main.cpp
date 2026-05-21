@@ -36,8 +36,4 @@ int main()
 	ubuntu.highFivesGuys();
 	windows.whoAmI();
 
-	/*ClapTrap *foo = new DiamondTrap("Pepe");
-
-	delete foo;
-    return (0);*/
 }

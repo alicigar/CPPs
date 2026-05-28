@@ -21,9 +21,9 @@ int main()
 	delete j;
 	delete i;
 
-	std::cout << "Extra tests" << std::endl;
-	const WrongAnimal* wrong = new WrongAnimal();
+	std::cout << "\nEXTRA TESTS" << std::endl;
 
+	const WrongAnimal* wrong = new WrongAnimal();
 	const WrongAnimal* wrongcat = new WrongCat();
 	std::cout << wrongcat->getType() << std::endl;
 	wrongcat->makeSound();

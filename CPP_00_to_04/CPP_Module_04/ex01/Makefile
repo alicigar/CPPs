@@ -1,7 +1,7 @@
-NAME = Brain
+NAME = Ideas
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp 
+SRCS = Animal.cpp Cat.cpp Dog.cpp main.cpp Brain.cpp 
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 

@@ -2,9 +2,13 @@
 
 AAnimal::AAnimal()
 {
-	std::cout << "AAnimal constructor called" << std::endl;
+	std::cout << "AAnimal default constructor called" << std::endl;
 }
 
+AAnimal::AAnimal(std::string type) : _type(type)
+{
+	std::cout << "AAnimal constructor called" << std::endl;
+}
 
 AAnimal::AAnimal(const AAnimal &src)
 {
